@@ -1,0 +1,48 @@
+<div class="login-form">
+  <h2>Login Form</h2>
+  <form (ngSubmit)="submitForm()" #loginForm="ngForm">
+    <div class="form-group">
+      <label for="name"> Name</label>
+      <input type="text" id="name" [(ngModel)]="login.name" required />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="login.password"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label>Role</label>
+      <div>
+        <label>
+          <input
+            type="radio"
+            name="role"
+            [(ngModel)]="login.role"
+            value="admin"
+            required
+          />
+          Admin
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="radio"
+            name="role"
+            [(ngModel)]="login.role"
+            value="student"
+            required
+          />
+          Student
+        </label>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+  </form>
+</div>

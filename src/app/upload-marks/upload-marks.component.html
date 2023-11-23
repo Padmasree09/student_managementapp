@@ -1,0 +1,21 @@
+<!-- upload-marks.component.html -->
+<form (submit)="uploadMarks()">
+  <div>
+    <label for="studentId">Select Student:</label>
+    <select id="studentId" [(ngModel)]="selectedStudent">
+      <option *ngFor="let student of students" [value]="student.id">
+        {{ student.name }}
+      </option>
+    </select>
+  </div>
+  <div>
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" [(ngModel)]="subject" required />
+  </div>
+  <div>
+    <label for="marks">Marks:</label>
+    <input type="number" id="marks" [(ngModel)]="marks" required />
+  </div>
+  <!-- Add more input fields or features as needed -->
+  <button type="submit">Upload Marks</button>
+</form>

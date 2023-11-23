@@ -1,0 +1,14 @@
+<!-- add-department.component.html -->
+<form (submit)="addDepartment()">
+  <div>
+    <label for="departmentName">Department Name:</label>
+    <input
+      type="text"
+      id="departmentName"
+      [(ngModel)]="departmentName"
+      required
+    />
+  </div>
+  <!-- Add more input fields as needed for department details -->
+  <button type="submit">Add Department</button>
+</form>

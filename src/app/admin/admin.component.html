@@ -1,0 +1,25 @@
+<!-- admin.component.html -->
+<div class="admin-dashboard">
+  <header>
+    <h1>Welcome to Admin Dashboard</h1>
+    <!-- Add any header content you need -->
+  </header>
+
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a (click)="showAddStudentsAlert()">Add Student</a></li>
+        <li><a (click)="showAddDepartmentsAlert()">Add Department</a></li>
+        <li><a (click)="showAssignStudentsAlert()">Assign Students</a></li>
+        <li><a (click)="showUploadMarksAlert()">Upload Students Marks</a></li>
+
+        <!-- Add more navigation items if needed -->
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+    <!-- This router-outlet will render child components -->
+  </main>
+</div>

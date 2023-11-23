@@ -1,0 +1,28 @@
+<!-- assign-students.component.html -->
+<form (submit)="assignStudent()">
+  <div>
+    <label for="studentSelect">Select Student:</label>
+    <select id="studentSelect" [(ngModel)]="selectedStudent">
+      <option *ngFor="let student of students" [value]="student.id">
+        {{ student.name }}
+      </option>
+    </select>
+  </div>
+  <div>
+    <label for="departmentSelect">Select Department:</label>
+    <select id="departmentSelect" [(ngModel)]="selectedDepartment">
+      <option *ngFor="let department of departments" [value]="department.id">
+        {{ department.name }}
+      </option>
+    </select>
+  </div>
+  <div>
+    <label for="courseSelect">Select Course:</label>
+    <select id="courseSelect" [(ngModel)]="selectedCourse">
+      <option *ngFor="let course of courses" [value]="course.id">
+        {{ course.name }}
+      </option>
+    </select>
+  </div>
+  <button type="submit">Assign Student</button>
+</form>
